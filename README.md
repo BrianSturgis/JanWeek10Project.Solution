@@ -14,7 +14,6 @@ This is an MVC web application to manage engineers, and the machines they are li
 - I should be able to navigate to a splash page that lists all engineers and machines. Users should be able to click on an individual engineer or machine to see all the engineers/machines that belong to it.
 Naming
 
-
 ## GIT HUB
 - repository location (https://github.com/BrianSturgis/JanWeek10Project.solution
 - open through a git terminal or clone editor.
