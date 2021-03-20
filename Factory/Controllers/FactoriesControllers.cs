@@ -7,10 +7,10 @@ using System.Linq;
 
 namespace Factory.Controllers
 {
-  public class EngineersController : Controller
-  {
+  public class FactoriesController : Controller
+{
     private readonly FactoryContext _db;
-
+    
     public FactoriesController(FactoryContext db)
     {
       _db = db;
@@ -18,8 +18,10 @@ namespace Factory.Controllers
 
     public ActionResult Index()
     {
-    return View(_db.Engineers.ToList());
+      List<Factory> model = _db.Factories.ToList();
+      return View(model);
     }
+
 
   }
 }
