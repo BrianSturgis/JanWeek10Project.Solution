@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Factory.Models;
@@ -7,11 +6,11 @@ using System.Linq;
 
 namespace Factory.Controllers
 {
-  public class EngineersController : Controller
+  public class FactoriesController : Controller
   {
     private readonly FactoryContext _db;
 
-    public EngineersController(FactoryContext db)
+    public FactoriesController(FactoryContext db)
     {
       _db = db;
     }
@@ -21,6 +20,7 @@ namespace Factory.Controllers
       List<Engineer> model = _db.Engineers.ToList();
       return View(model);
     }
+
     public ActionResult Create()
     {
       return View();
@@ -33,6 +33,7 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
     public ActionResult Details(int id)
     {
       var thisEngineer = _db.Engineers
@@ -54,6 +55,7 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
 
 
 
