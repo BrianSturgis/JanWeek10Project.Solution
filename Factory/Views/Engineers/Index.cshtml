@@ -3,7 +3,7 @@
 } *@
 
 @using Factory.Models;
-@model List<Factory.Models.Engineer>;
+
 
 <h1>Engineer</h1>
 
@@ -12,9 +12,12 @@
   <h3>No Engineer have been added yet!</h3>
 }
 
-@foreach (Engineer engineer in Model)
-{
-  <li>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })</li>
-}
+<ul></ul>
+  @foreach (Engineer engineer in Model)
+  {
+    <li>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })</li>
+  }
+</ul>
 
 <p>@Html.ActionLink("Add new engineer", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
