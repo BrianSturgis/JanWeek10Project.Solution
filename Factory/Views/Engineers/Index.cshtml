@@ -12,7 +12,7 @@
   <h3>No Engineer have been added yet!</h3>
 }
 
-<ul></ul>
+<ul>
   @foreach (Engineer engineer in Model)
   {
     <li>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })</li>
