@@ -20,7 +20,6 @@ namespace Factory.Controllers
       return View(_db.Machines.ToList());
     }
 
-
     public ActionResult Create()
     {
       ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
@@ -38,6 +37,15 @@ namespace Factory.Controllers
       }
       _db.SaveChanges();
       return RedirectToAction("Index");
+    }
+
+    public ActionResult Details(int id)
+    {
+      var thisMachine = _db.Machines
+          .Include(machine => machine.JoinEntities)
+          .ThenInclude(join => join.Engineer)
+          .FirstOrDefault(machine => machine.MachineId == id);
+      return View(thisMachine);
     }
 
     public ActionResult Edit(int id)
