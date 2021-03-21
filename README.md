@@ -2,7 +2,7 @@
 <p align="center">Updated on March 19th, 2021</p>
 
 ## Detailed Description
-This is an MVC web application to manage engineers, and the machines they are licensed to fix. The factory manager should be able to add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines. There should be a many-to-many relationship between Engineers and Machines. 
+This is an MVC web application to manage engineers, and the machines they are licensed to fix. The factory manager should be able to add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines. There should be a many-to-many relationship between Engineers and Machines.
 
 ## Objectives (as quoted from the assignment)
 ### User Stories
