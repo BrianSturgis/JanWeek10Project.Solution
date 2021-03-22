@@ -8,10 +8,8 @@ namespace Factory.Models
     {
       this.JoinEntities = new HashSet<MachineEngineer>();
     }
-
     public int MachineId { get; set; }
     public string MachineName { get; set; }
-    
 
     public virtual ICollection<MachineEngineer> JoinEntities { get; }
   }

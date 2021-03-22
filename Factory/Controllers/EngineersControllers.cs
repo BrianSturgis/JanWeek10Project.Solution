@@ -9,12 +9,10 @@ namespace Factory.Controllers
   public class EngineersController : Controller
   {
     private readonly FactoryContext _db;
-
     public EngineersController(FactoryContext db)
     {
       _db = db;
     }
-
     public ActionResult Index()
     {
         return View(_db.Engineers.ToList());
@@ -31,7 +29,6 @@ namespace Factory.Controllers
     {
       return View();
     }
-
     [HttpPost]
     public ActionResult Create(Engineer engineer)
     {
@@ -39,14 +36,11 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-
-
     public ActionResult Edit(int id)
     {
       var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
     }
-
     [HttpPost]
     public ActionResult Edit(Engineer engineer)
     {
@@ -54,13 +48,11 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-
     public ActionResult Delete(int id)
     {
       var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
     }
-
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
@@ -69,7 +61,6 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-
     [HttpPost]
     public ActionResult DeleteMachine(int joinId)
     {
@@ -78,7 +69,5 @@ namespace Factory.Controllers
         _db.SaveChanges();
         return RedirectToAction("Index");
     }
-
-
   }
 }

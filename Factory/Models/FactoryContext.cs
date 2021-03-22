@@ -8,8 +8,6 @@ namespace Factory.Models
     public DbSet<Machine> Machines { get; set; }
     public DbSet<MachineEngineer> MachineEngineer { get; set; }
 
-   
-
     public FactoryContext(DbContextOptions options) : base(options) { }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
