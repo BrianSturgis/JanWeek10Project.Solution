@@ -26,7 +26,7 @@ Naming
 * Confirm you have installed .NET installed - this will provide access to the C# language
   * [.NET for macOS](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-macos-x64-installer)
   * [.NET for Windows](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.102-windows-x64-installer)
-* Additionally, you may want to install a REPL to allow you to practice, test, and experiment with C#. Below are instructions for the ```dotnet script``` REPL:
+* Below are instructions for the ```dotnet script``` REPL:
   * Install ```dotnet script``` by running the following terminal command: ```$ dotnet tool install -g dotnet-script```
   * **NOTE:** If you just installed .NET 5, restart the terminal. (Otherwise, you will not be able to run the following command.)
     * Enter ```$ dotnet script``` in your terminal and a prompt will open: ```>```
