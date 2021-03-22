@@ -19,6 +19,14 @@ namespace Factory.Controllers
     {
         return View(_db.Engineers.ToList());
     }
+    public ActionResult Details(int id)
+    {
+      var thisEngineer = _db.Engineers
+          .Include(engineer => engineer.JoinEntities)
+          .ThenInclude(join => join.Machine)
+          .FirstOrDefault(engineer => engineer.EngineerId == id);
+      return View(thisEngineer);
+    }
     public ActionResult Create()
     {
       return View();
@@ -32,14 +40,6 @@ namespace Factory.Controllers
       return RedirectToAction("Index");
     }
 
-    public ActionResult Details(int id)
-    {
-      var thisEngineer = _db.Engineers
-          .Include(engineer => engineer.JoinEntities)
-          .ThenInclude(join => join.Machine)
-          .FirstOrDefault(engineer => engineer.EngineerId == id);
-      return View(thisEngineer);
-    }
 
     public ActionResult Edit(int id)
     {
@@ -69,5 +69,16 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    [HttpPost]
+    public ActionResult DeleteMachine(int joinId)
+    {
+        var joinEntry = _db.MachineEngineer.FirstOrDefault(entry => entry.MachineEngineerId == joinId);
+        _db.MachineEngineer.Remove(joinEntry);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
+
   }
 }
