@@ -40,14 +40,6 @@ This is an MVC web application to manage engineers, and the machines they are li
 * To launch the program, run the terminal command: ```dotnet run```
 (Ensure you are in the project's root directory, Factory, in your Terminal/CMD before running these commands.)
 
-## Setting up a Local Database
-- Download MySQL Server.
-(Note: If you need additional assistance setting up MySQL, visit their site for further instructions.
-- Download MySQL Workbench.
-- Run dotnet ef migrations add Initial --> If there is an error stating "Unable to resolve project", this means the command wasn't run in the correct directory.
-- Entity creates three files in the Migrations directory.
-- Run the following command: dotnet ef database update.
-
 ## MySQL Password Protection & .gitignore
 - Create a file in the root directory of the project called "appsettings.json".
 - Where you see "YOUR-PASSWORD-HERE" is where you put the password you created for your MySQL server. Your server name and port might vary depending on your local system. Check MySQL Workbench Connections to determine if the local host and port number match and adjust as needed.
@@ -57,6 +49,14 @@ bin/
 .vscode/
 .DS_Store   // if using a mac only
 appsettings.json
+
+## Setting up a Local Database
+- Download MySQL Server.
+(Note: If you need additional assistance setting up MySQL, visit their site for further instructions.
+- Download MySQL Workbench.
+- Run dotnet ef migrations add Initial --> If there is an error stating "Unable to resolve project", this means the command wasn't run in the correct directory.
+- Entity creates three files in the Migrations directory.
+- Run the following command: dotnet ef database update.
 
 ## Support and contact details
 email Brian Sturgis @ <sturujisu@gmail.com>
