@@ -4,10 +4,6 @@
 ## Detailed Description
 This is an MVC web application to manage engineers, and the machines they are licensed to fix. The factory manager should be able to add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines. There should be a many-to-many relationship between Engineers and Machines.
 
-
-## KNOWN BUGS
-
-
 ## Objectives (as quoted from the assignment)
 ### User Stories
 - As the factory manager, I need to be able to see a list of all engineers, and I need to be able to see a list of all machines.
@@ -43,6 +39,25 @@ Naming
     * To create ```obj``` directories in both production and test projects, run the terminal command: ```$ dotnet restore```
     * **NOTE**: Do not touch the code in either ```obj``` directory.
 * To launch the program, run the terminal command: ```dotnet run```
+(Ensure you are in the project's root directory, Factory, in your Terminal/CMD before running these commands.)
+
+## Setting up a Local Database
+- Download MySQL Server.
+(Note: If you need additional assistance setting up MySQL, visit their site for further instructions.
+- Download MySQL Workbench.
+- Run dotnet ef migrations add Initial --> If there is an error stating "Unable to resolve project", this means the command wasn't run in the correct directory.
+- Entity creates three files in the Migrations directory.
+- Run the following command: dotnet ef database update.
+
+## MySQL Password Protection & .gitignore
+- Create a file in the root directory of the project called "appsettings.json".
+- Where you see "YOUR-PASSWORD-HERE" is where you put the password you created for your MySQL server. Your server name and port might vary depending on your local system. Check MySQL Workbench Connections to determine if the local host and port number match and adjust as needed.
+- Create a .gitignore file and add the following files & folders to it:
+obj/
+bin/
+.vscode/
+.DS_Store   // if using a mac only
+appsettings.json
 
 ## Support and contact details
 email Brian Sturgis @ <sturujisu@gmail.com>
