@@ -12,7 +12,6 @@ This is an MVC web application to manage engineers, and the machines they are li
 - As the factory manager, I should be able to add new machines even if no engineers are employed. I should also be able to add new engineers even if no machines are installed
 - As the factory manager, I need to be able to add or remove machines that a specific engineer is licensed to repair. I also need to be able to modify this relationship from the other side, and add or remove engineers from a specific machine.
 - I should be able to navigate to a splash page that lists all engineers and machines. Users should be able to click on an individual engineer or machine to see all the engineers/machines that belong to it.
-Naming
 
 ## GIT HUB
 - repository location (https://github.com/BrianSturgis/JanWeek10Project.solution
