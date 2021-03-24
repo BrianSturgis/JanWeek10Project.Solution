@@ -43,6 +43,9 @@ This is an MVC web application to manage engineers, and the machines they are li
 ## MySQL Password Protection
 - Create a file in the root directory of the project called "appsettings.json".
 - Where you see "YOUR-PASSWORD-HERE" is where you put the password you created for your MySQL server. Your server name and port might vary depending on your local system. Check MySQL Workbench Connections to determine if the local host and port number match and adjust as needed.
+see example of file set up below.
+
+## appsettings.json
 ```CS
 {
   "ConnectionStrings": {
