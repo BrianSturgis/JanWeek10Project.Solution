@@ -1,6 +1,5 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
-
 namespace Factory
 {
   public class Program
@@ -13,7 +12,6 @@ namespace Factory
         .UseIISIntegration()
         .UseStartup<Startup>()
         .Build();
-
       host.Run();
     }
   }
