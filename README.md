@@ -40,15 +40,17 @@ This is an MVC web application to manage engineers, and the machines they are li
 * To launch the program, run the terminal command: ```dotnet run```
 (Ensure you are in the project's root directory, Factory, in your Terminal/CMD before running these commands.)
 
-## MySQL Password Protection & .gitignore
+## MySQL Password Protection
 - Create a file in the root directory of the project called "appsettings.json".
 - Where you see "YOUR-PASSWORD-HERE" is where you put the password you created for your MySQL server. Your server name and port might vary depending on your local system. Check MySQL Workbench Connections to determine if the local host and port number match and adjust as needed.
-- Create a .gitignore file and add the following files & folders to it:
-obj/
-bin/
-.vscode/
-.DS_Store   // if using a mac only
-appsettings.json
+```CS
+{
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=[YOUR_DATABASE];uid=root;pwd=[YOUR_PASSWORD];"
+  }
+}
+
+```
 
 ## Setting up a Local Database
 - Download MySQL Server.

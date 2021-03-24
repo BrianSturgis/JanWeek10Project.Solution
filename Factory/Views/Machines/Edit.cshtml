@@ -11,10 +11,10 @@
     @Html.LabelFor(model => model.MachineName)
     @Html.EditorFor(model => model.MachineName)
 
-    @Html.Label("Select Machine")
-    @Html.DropDownList("MachineId")
+    @Html.Label("Select engineer")
+    @Html.DropDownList("EngineerId")
 
     <input type="submit" value="Save" />
 }
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Back to Machine list", "Index")</p>
